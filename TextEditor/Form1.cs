@@ -122,5 +122,11 @@ namespace TextEditor
                 Application.Exit();
             }
         }
+
+        private void licenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form license = new LicenseForm();
+            license.Show();
+        }
     }
 }

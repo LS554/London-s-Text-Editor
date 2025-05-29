@@ -44,6 +44,8 @@ namespace TextEditor
             saveAsToolStripMenuItem = new ToolStripMenuItem();
             closeCurrentFileToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            licenseToolStripMenuItem = new ToolStripMenuItem();
             filePathLabel = new Label();
             openFileDialog = new OpenFileDialog();
             fileStatusLabel = new Label();
@@ -61,7 +63,7 @@ namespace TextEditor
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(830, 24);
@@ -117,6 +119,20 @@ namespace TextEditor
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { licenseToolStripMenuItem });
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(52, 20);
+            aboutToolStripMenuItem.Text = "About";
+            // 
+            // licenseToolStripMenuItem
+            // 
+            licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
+            licenseToolStripMenuItem.Size = new Size(180, 22);
+            licenseToolStripMenuItem.Text = "License";
+            licenseToolStripMenuItem.Click += licenseToolStripMenuItem_Click;
+            // 
             // filePathLabel
             // 
             filePathLabel.AutoSize = true;
@@ -152,7 +168,9 @@ namespace TextEditor
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "Form1";
+            ShowIcon = false;
             Text = "London's Text Editor";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -175,5 +193,7 @@ namespace TextEditor
         private ToolStripMenuItem closeCurrentFileToolStripMenuItem;
         private Label fileStatusLabel;
         private SaveFileDialog saveFileDialog;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem licenseToolStripMenuItem;
     }
 }
