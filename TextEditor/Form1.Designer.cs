@@ -40,6 +40,7 @@
             filePathLabel = new Label();
             openFileDialog = new OpenFileDialog();
             fileStatusLabel = new Label();
+            saveFileDialog = new SaveFileDialog();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(163, 22);
             openToolStripMenuItem.Text = "Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
@@ -78,7 +79,7 @@
             // 
             saveToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveCurrentToolStripMenuItem, saveAsToolStripMenuItem });
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(163, 22);
             saveToolStripMenuItem.Text = "Save";
             // 
             // saveCurrentToolStripMenuItem
@@ -93,19 +94,21 @@
             saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             saveAsToolStripMenuItem.Size = new Size(139, 22);
             saveAsToolStripMenuItem.Text = "Save as new";
+            saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
             // 
             // closeCurrentFileToolStripMenuItem
             // 
             closeCurrentFileToolStripMenuItem.Name = "closeCurrentFileToolStripMenuItem";
-            closeCurrentFileToolStripMenuItem.Size = new Size(180, 22);
+            closeCurrentFileToolStripMenuItem.Size = new Size(163, 22);
             closeCurrentFileToolStripMenuItem.Text = "Close current file";
             closeCurrentFileToolStripMenuItem.Click += closeCurrentFileToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(163, 22);
             exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // filePathLabel
             // 
@@ -127,6 +130,10 @@
             fileStatusLabel.Size = new Size(0, 15);
             fileStatusLabel.TabIndex = 3;
             // 
+            // saveFileDialog
+            // 
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -139,7 +146,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            Text = "Form1";
+            Text = "London's Text Editor";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -160,5 +167,6 @@
         private ToolStripMenuItem saveAsToolStripMenuItem;
         private ToolStripMenuItem closeCurrentFileToolStripMenuItem;
         private Label fileStatusLabel;
+        private SaveFileDialog saveFileDialog;
     }
 }

@@ -1,3 +1,10 @@
+/*
+* Copyright (c) 2025 London Sheard
+*
+* This software is released under the BSD 3-Clause License.
+* See LICENSE file for details.
+*/
+
 namespace TextEditor
 {
     internal static class Program
