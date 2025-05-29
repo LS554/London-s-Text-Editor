@@ -129,7 +129,7 @@ namespace TextEditor
             // licenseToolStripMenuItem
             // 
             licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
-            licenseToolStripMenuItem.Size = new Size(180, 22);
+            licenseToolStripMenuItem.Size = new Size(113, 22);
             licenseToolStripMenuItem.Text = "License";
             licenseToolStripMenuItem.Click += licenseToolStripMenuItem_Click;
             // 
@@ -171,6 +171,7 @@ namespace TextEditor
             MaximizeBox = false;
             Name = "Form1";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "London's Text Editor";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
