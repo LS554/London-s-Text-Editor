@@ -52,7 +52,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             Name = "LicenseForm";
             ShowIcon = false;
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "License";
             ResumeLayout(false);
         }
